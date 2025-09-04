@@ -130,5 +130,60 @@
     <div class="destinations-grid">
         <!-- Destination cards will be populated here -->
     </div>
+
+    <script>
+        // Example JavaScript to fetch and display destinations
+        const destinationsGrid = document.querySelector('.destinations-grid');
+        
+        // Sample data - replace with real API calls
+        const destinations = [
+            {
+                name: 'Paris, France',
+                image: 'https://source.unsplash.com/random/600x400/?paris',
+                description: 'The City of Light offers iconic landmarks and world-class cuisine.',
+                rating: 5,
+                price: 'From $1299'
+            },
+            {
+                name: 'Tokyo, Japan',
+                image: 'https://source.unsplash.com/random/600x400/?tokyo',
+                description: 'Experience modernity and tradition in this vibrant city.',
+                rating: 4.5,
+                price: 'From $2199'
+            },
+            {
+                name: 'New York, USA',
+                image: 'https://source.unsplash.com/random/600x400/?newyork',
+                description: 'A melting pot of culture and opportunities in the Big Apple.',
+                rating: 4.8,
+                price: 'From $999'
+            }
+        ];
+
+        function createDestinationCard(destination) {
+            const card = document.createElement('div');
+            card.className = 'destination-card';
+            card.innerHTML = `
+                <img src="${destination.image}" alt="${destination.name}" class="destination-image">
+                <div class="destination-info">
+                    <h3>${destination.name}</h3>
+                    <p>${destination.description}</p>
+                    <div class="rating-stars">
+                        ${Array.from({ length: destination.rating }, (_, i) => `
+                            ${i + 1 <= Math.floor(destination.rating) ? '★' : (Math.floor(destination.rating) === i + 0.5 ? '⯨' : '☆')}
+                        `).join('')}
+                    </div>
+                    <span class="price-tag">${destination.price}</span>
+                    <a href="#" class="btn-learn-more">Learn More</a>
+                </div>
+            `;
+            return card;
+        }
+
+        destinations.forEach(destination => {
+            const card = createDestinationCard(destination);
+            destinationsGrid.appendChild(card);
+        });
+    </script>
 </body>
 </html>
