@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            color: #333;
+        }
+        .posts {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .post {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            flex-basis: calc(33.333% - 20px);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>我的个人博客</h1>
+        <p>分享技术与生活</p>
+    </div>
+    <div class="posts">
+        <div class="post">
+            <h2>最新文章</h2>
+            <p>探索最新的前端开发趋势和工具，帮助您提升编码效率。</p>
+        </div>
+        <div class="post">
+            <h2>项目展示</h2>
+            <p>查看我参与的开源项目和实际案例，了解我的技术能力。</p>
+        </div>
+        <div class="post">
+            <h2>个人简介</h2>
+            <p>热爱编程与设计，专注于Web开发和用户体验优化。</p>
+        </div>
+    </div>
+</body>
+</html>
