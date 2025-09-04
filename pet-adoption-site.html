@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            color: #333;
+            padding: 40px 0;
+        }
+        .pets-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .pet-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+        .pet-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .apply-form {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Pet Adoption Center</h1>
+        <p>Find your new best friend here!</p>
+    </div>
+
+    <div class="pets-list">
+        <!-- Pet Cards go here -->
+    </div>
+
+    <div class="apply-form">
+        <h2>Adoption Application</h2>
+        <form action="#">
+            <input type="text" placeholder="Your Name" required><br>
+            <input type="email" placeholder="Email Address" required><br>
+            <input type="tel" placeholder="Phone Number" required><br>
+            <input type="text" placeholder="Address" required><br>
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+
+    <div class="info-section">
+        <h2>About Adoption</h2>
+        <p>Discover the joy of providing a loving home to an animal in need. Our adoption process is designed to ensure a perfect match between you and your new pet.</p>
+    </div>
+</body>
+</html>
